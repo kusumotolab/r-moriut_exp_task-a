@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+jar {
+    archiveBaseName.set('game')
+    manifest {
+        attributes(
+            'Main-Class': 'HelloWorld'
+        )
+    }
+}
