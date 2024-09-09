@@ -1,5 +1,5 @@
 # ベースイメージを指定
-FROM ubuntu
+FROM ubuntu:24.04
 
 # 必要なパッケージをインストール
 RUN apt-get update \
