@@ -16,10 +16,9 @@ RUN cp /conf/default.conf /etc/nginx/conf.d/default.conf \
     && cp -r /web/* /var/www/html
 
 # Gradleのインストール
-ENV GRADLE_VERSION=7.6
-RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -P /tmp \
-    && unzip -d /opt/gradle /tmp/gradle-${GRADLE_VERSION}-bin.zip \
-    && ln -s /opt/gradle/gradle-${GRADLE_VERSION} /opt/gradle/latest
+RUN wget https://services.gradle.org/distributions/gradle-7.6-bin.zip -P /tmp \
+    && unzip -d /opt/gradle /tmp/gradle-7.6-bin.zip \
+    && ln -s /opt/gradle/gradle-7.6 /opt/gradle/latest
 
 # Gradleのバイナリをパスに追加
 ENV PATH=/opt/gradle/latest/bin:${PATH}
