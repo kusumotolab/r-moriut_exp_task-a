@@ -8,7 +8,7 @@ RUN apt-get update \
     openjdk-8-jdk \
     unzip \
     wget \
-    python3
+    gfortran
 
 # nginxの設定ファイルとWebリソース，ゲームの開発プロジェクトをコンテナにコピー
 COPY . .
